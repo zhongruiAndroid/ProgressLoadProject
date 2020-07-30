@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressLoad">
+        <attr name="pointStartColor" format="color"></attr>
+        <attr name="pointEndColor" format="color"></attr>
+        <attr name="pointNum" format="integer"></attr>
+        <attr name="pointWidth" format="dimension"></attr>
+        <attr name="rotationSpeed" format="integer"></attr>
+        <attr name="rotationDirection" format="enum">
+            <enum name="cw" value="0"></enum>
+            <enum name="ccw" value="1"></enum>
+        </attr>
+        <attr name="radius" format="dimension"></attr>
+        <attr name="pointDirection" format="enum">
+            <enum name="cw" value="0"></enum>
+            <enum name="ccw" value="1"></enum>
+        </attr>
+        <attr name="pointStartAngle" format="integer"></attr>
+    </declare-styleable>
+</resources>
