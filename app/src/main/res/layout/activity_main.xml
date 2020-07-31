@@ -1,18 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.github.progressload.ProgressLoad
+            android:id="@+id/pl"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            app:pointStartColor="#56A79F9F"
+            android:background="@color/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pointNum" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/pointNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pointWidth" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/pointWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="30"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rotationSpeed" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/rotationSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5000"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbCw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="顺时针旋转" />
+
+            <RadioButton
+                android:id="@+id/rbCcw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="逆时针旋转" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="radius" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="90"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbPointCw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="圆点顺时针摆放" />
+
+            <RadioButton
+                android:id="@+id/rbPointCcw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="圆点逆时针摆放" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pointStartAngle" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/pointStartAngle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="720"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <Button
+                android:id="@+id/bt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="complete"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btVisible"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="visible"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btInVisible"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="InVisible"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btGone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Gone"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
